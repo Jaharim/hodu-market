@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodu Market</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <header class="wrapper">
+        <h1 class="nav-logo">
+          <a href="#"><img src="./images/Logo-fin.svg" alt="호두로고" /></a>
+        </h1>
+        <div class="nav-contents">
+          <ul class="nav-link">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+          <button class="nav-downlaod-btn" type="button">Download</button>
+        </div>
+      </header>
+      <section class="wrapper upper">
+        <div class="upper-desc">
+          <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+            eveniet enim atque officiis, amet officia adipisci quos dolores
+            quidem maiores odit accusamus vel voluptate est culpa fugit, quasi
+            autem vitae.
+          </p>
+          <button type="button">Download</button>
+        </div>
+        <img src="./images/boxhead-cat.png" alt="" />
+      </section>
+    </div>
+    <div class="main-container">
+      <main class="wrapper">
+        <section class="main-contents">
+          <article class="first-content">
+            <img src="./images/img_4.png" alt="고양이이미지4" />
+            <div class="first-content-desc">
+              <h2>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Deserunt eos ea dolorum?
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                quisquam explicabo beatae.
+              </p>
+            </div>
+          </article>
+          <article class="second-content">
+            <h2 class="second-content-title">
+              Lorem ipsum dolor, sit amet consectetur adipisicing.
+            </h2>
+            <p class="second-content-desc">
+              Lorem ipsum dolor sit <span>amet consectetur</span> adipisicing
+              elit. Consequuntur doloribus inventore dolores cupiditate
+              quibusdam totam amet, sed blanditiis eum laboriosam error maxime!
+              Tempora sequi repellendus placeat ad maiores!
+            </p>
+            <ul class="second-content-images">
+              <li>
+                <img src="./images/img_1.png" alt="고양이이미지1" />
+              </li>
+              <li>
+                <img src="./images/img_2.png" alt="고양이이미지2" />
+              </li>
+              <li>
+                <img src="./images/img_3.png" alt="고양이이미지3" />
+              </li>
+            </ul>
+            <div class="second-content-more">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                hic magnam voluptate dolores cumque quis repudiandae,
+                perspiciatis in enim quo officiis voluptatem quas velit eius
+                omnis ipsam ea voluptates esse?
+              </p>
+              <button class="learn-more-btn" type="button">Learn More</button>
+              <dialog>
+                <img src="./images/cat-head.png" alt="호두머리" />
+                <h2>Thank you!</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                  fugiat.
+                </p>
+                <form method="dialog">
+                  <button>OK! I Love HODU</button>
+                </form>
+              </dialog>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <div class="footer-container">
+      <footer class="wrapper">
+        <article class="subscribe-content">
+          <div class="subscribe-desc">
+            <h2>Subscribe to our Blog post</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              quos perferendis, pariatur, dolore sunt, consequatur quibusdam
+              quae explicabo maxime ab nostrum.
+            </p>
+          </div>
+          <div class="subscribe-email-input">
+            <div class="email-input-background">
+              <input type="text" placeholder="Enter your e-mail address" />
+              <button type="button">Subscribe</button>
+            </div>
+          </div>
+        </article>
+        <div class="footer-content">
+          <img src="./images/Logo-fin.svg" alt="호두로고" />
+          <ul class="footer-sns-lists">
+            <li>
+              <a href="#"
+                ><img src="./images/icon-blog.png" alt="네이버블로그"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-insta.png" alt="인스타그램"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-facebook.png" alt="페이스북"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/icon-youtube.png" alt="유튜브"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <a class="scroll-to-top" href="#"><div class="up-arrow"></div></a>
+    <script>
+      const btn = document.querySelector('.learn-more-btn');
+      const modal = document.querySelector('dialog');
+
+      btn.addEventListener('click', () => {
+        modal.showModal();
+      });
+    </script>
+  </body>
+</html>
