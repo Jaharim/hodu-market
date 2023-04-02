@@ -1,4 +1,8 @@
 /* reset */
+* {
+  scroll-behavior: smooth;
+}
+
 ul,
 li,
 h1,
@@ -25,6 +29,7 @@ a {
 body {
   position: relative;
 }
+
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -35,7 +40,7 @@ body {
   inset: 0;
 }
 
-header {
+.header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,11 +48,11 @@ header {
   margin-bottom: 32px;
 }
 
-header .nav-logo img {
+.header-wrapper .nav-logo img {
   vertical-align: bottom;
 }
 
-header .nav-contents,
+.header-wrapper .nav-contents,
 .nav-link {
   display: flex;
   align-items: center;
@@ -203,32 +208,10 @@ header .nav-contents,
   outline: none;
 }
 
-.subscribe-email-input button {
+.subscribe-email-input .subscribe-button {
   position: absolute;
   right: 5px;
 }
-/* 
-footer {
-  position: relative;
-}
-
-footer::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #c4c4c4;
-  border-radius: 50%;
-  background: url(./images/keyboard_arrow_up.svg) no-repeat 0 0 / cover;
-  top: -75px;
-  right: -271px;
-}
-
-footer::before:hover {
-  opacity: 1;
-} */
 
 .footer-content,
 .footer-sns-lists {
@@ -250,7 +233,6 @@ dialog {
   padding: 60px 109px 40px;
   border: 0;
   border-radius: 30px;
-  /* box-shadow: 5px 5px 3px #f2e9d8; */
   background: url(./images/modal-background.png) no-repeat 0 0 / cover;
 }
 

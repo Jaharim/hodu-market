@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header-container">
-      <header class="wrapper">
+    <header class="header-container">
+      <div class="wrapper header-wrapper">
         <h1 class="nav-logo">
           <a href="#"><img src="./images/Logo-fin.svg" alt="호두로고" /></a>
         </h1>
@@ -29,7 +29,7 @@
           </ul>
           <button class="nav-downlaod-btn" type="button">Download</button>
         </div>
-      </header>
+      </div>
       <section class="wrapper upper">
         <div class="upper-desc">
           <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
@@ -43,9 +43,9 @@
         </div>
         <img src="./images/boxhead-cat.png" alt="" />
       </section>
-    </div>
-    <div class="main-container">
-      <main class="wrapper">
+    </header>
+    <main class="main-container">
+      <div class="wrapper">
         <section class="main-contents">
           <article class="first-content">
             <img src="./images/img_4.png" alt="고양이이미지4" />
@@ -89,25 +89,14 @@
                 omnis ipsam ea voluptates esse?
               </p>
               <button class="learn-more-btn" type="button">Learn More</button>
-              <dialog>
-                <img src="./images/cat-head.png" alt="호두머리" />
-                <h2>Thank you!</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                  fugiat.
-                </p>
-                <form method="dialog">
-                  <button>OK! I Love HODU</button>
-                </form>
-              </dialog>
             </div>
           </article>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
 
-    <div class="footer-container">
-      <footer class="wrapper">
+    <footer class="footer-container">
+      <div class="wrapper">
         <article class="subscribe-content">
           <div class="subscribe-desc">
             <h2>Subscribe to our Blog post</h2>
@@ -120,7 +109,18 @@
           <div class="subscribe-email-input">
             <div class="email-input-background">
               <input type="text" placeholder="Enter your e-mail address" />
-              <button type="button">Subscribe</button>
+              <button class="subscribe-button" type="button">Subscribe</button>
+              <dialog>
+                <img src="./images/cat-head.png" alt="호두머리" />
+                <h2>Thank you!</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                  fugiat.
+                </p>
+                <form method="dialog">
+                  <button>Close</button>
+                </form>
+              </dialog>
             </div>
           </div>
         </article>
@@ -149,11 +149,11 @@
             </li>
           </ul>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <a class="scroll-to-top" href="#"><div class="up-arrow"></div></a>
     <script>
-      const btn = document.querySelector('.learn-more-btn');
+      const btn = document.querySelector('.subscribe-button');
       const modal = document.querySelector('dialog');
 
       btn.addEventListener('click', () => {
