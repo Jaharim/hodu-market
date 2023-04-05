@@ -15,7 +15,8 @@
         <h1 class="nav-logo">
           <a href="#"><img src="./images/Logo-fin.svg" alt="호두로고" /></a>
         </h1>
-        <div class="nav-contents">
+        <img src='./images/menu.svg' class="hamburger-open-btn"></img>
+        <nav class="nav-contents">
           <ul class="nav-link">
             <li>
               <a href="#">Home</a>
@@ -28,7 +29,7 @@
             </li>
           </ul>
           <button class="nav-downlaod-btn" type="button">Download</button>
-        </div>
+        </nav>
       </div>
       <section class="wrapper upper">
         <div class="upper-desc">
@@ -40,11 +41,29 @@
             autem vitae.
           </p>
           <button type="button">Download</button>
-        </div>
+        </div>        
         <img src="./images/boxhead-cat.png" alt="" />
       </section>
+      <article class='hamburger-menu hamburger-hide'>
+        <img class='hamburger-close-btn' src="./images/arrow-right.svg" alt="햄버거 메뉴 닫기 버튼">
+        <nav class="hamburger-nav-contents">
+          <ul class="hamburger-nav-link">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+          <button class="hamburger-nav-downlaod-btn" type="button">Download</button>
+        </nav>
+      </article>
     </header>
     <main class="main-container">
+      <h1 class="a11y-hidden">메인컨텐츠</h1>
       <div class="wrapper">
         <section class="main-contents">
           <article class="first-content">
@@ -65,10 +84,11 @@
               Lorem ipsum dolor, sit amet consectetur adipisicing.
             </h2>
             <p class="second-content-desc">
-              Lorem ipsum dolor sit <span>amet consectetur</span> adipisicing
-              elit. Consequuntur doloribus inventore dolores cupiditate
-              quibusdam totam amet, sed blanditiis eum laboriosam error maxime!
-              Tempora sequi repellendus placeat ad maiores!
+              Lorem ipsum dolor sit
+              <strong>amet consectetur</strong> adipisicing elit. Consequuntur
+              doloribus inventore dolores cupiditate quibusdam totam amet, sed
+              blanditiis eum laboriosam error maxime! Tempora sequi repellendus
+              placeat ad maiores!
             </p>
             <ul class="second-content-images">
               <li>
@@ -108,7 +128,11 @@
           </div>
           <div class="subscribe-email-input">
             <div class="email-input-background">
-              <input type="text" placeholder="Enter your e-mail address" />
+              <input
+                type="email"
+                placeholder="Enter your e-mail address"
+                maxlength="30"
+              />
               <button class="subscribe-button" type="button">Subscribe</button>
               <dialog>
                 <img src="./images/cat-head.png" alt="호두머리" />
@@ -124,7 +148,7 @@
             </div>
           </div>
         </article>
-        <div class="footer-content">
+        <article class="footer-content">
           <img src="./images/Logo-fin.svg" alt="호두로고" />
           <ul class="footer-sns-lists">
             <li>
@@ -148,17 +172,55 @@
               /></a>
             </li>
           </ul>
-        </div>
+        </article>
+        <article class="footer-hide-menu">
+          <ul class="footer-hide-menu-lists">
+            <li>
+              <a href="#">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Support
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Terms of Use
+              </a>
+            </li>
+          </ul>
+        </article>
       </div>
     </footer>
     <a class="scroll-to-top" href="#"><div class="up-arrow"></div></a>
     <script>
-      const btn = document.querySelector('.subscribe-button');
-      const modal = document.querySelector('dialog');
+      const $btn = document.querySelector('.subscribe-button');
+      const $modal = document.querySelector('dialog');
+      const $hamburgerMenu = document.querySelector('.hamburger-menu'); 
+      const $openHamburgerMenu = document.querySelector('.hamburger-open-btn');
+      const $closeHamburgerMenu = document.querySelector('.hamburger-close-btn');
 
-      btn.addEventListener('click', () => {
-        modal.showModal();
+      $btn.addEventListener('click', () => {
+        $modal.showModal();
       });
+
+      $openHamburgerMenu.addEventListener('click', ()=> {
+        $hamburgerMenu.classList.remove('hamburger-hide');
+        $hamburgerMenu.classList.add('hamburger-show');
+      });
+
+      $closeHamburgerMenu.addEventListener('click', ()=> {
+        $hamburgerMenu.classList.remove('hamburger-show');
+        $hamburgerMenu.classList.add('hamburger-hide');
+      });
+
     </script>
   </body>
 </html>
